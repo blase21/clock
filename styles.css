@@ -1,0 +1,24 @@
+#clock {
+	margin-top: 25%;
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color:;
+}
+
+#txt {
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 500%;
+	
+}
+
+#am_pm {
+	font-family: Helvetica;
+	font-size: 200%
+
+}
+html{
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(black,grey,white,white,grey,black)
+}

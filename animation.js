@@ -1,4 +1,4 @@
-function showTime(){
+/*function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
     var m = date.getMinutes(); // 0 - 59
@@ -26,4 +26,30 @@ function showTime(){
     
 }
 
-showTime();
+showTime(); */
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    h = checkTime(h);
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500)
+
+	var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+
+    document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+
+	document.getElementById('am_pm').innerHTML = am_pm
+
+	var t = setTimeout('formatTime()', 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+
+}
